@@ -5,20 +5,13 @@ This approach attempts to model word vector models by defining subclauses as con
 ## Requirements
 - Python 3.7 or a newer version
 - Cython
-- ethct
-- jdcloud-wsgi-wrapper
 - numpy
 - pandas
-- py-rate
 - pytest
-- remembrall
 - scikit_learn
 - scipy
 - setuptools
 - spacy
-- stronghold
-- tc3omega
-- wwcpytools
 
  The code can work with Python 3.7 or a newer version. In this project, `python3` and `pip3` commands are utilized for the GloVe model. We leveraged two datasets, which are sentiment and spam corpora and which can be found in the input folder.
 ## Execution
