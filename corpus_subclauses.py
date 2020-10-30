@@ -75,7 +75,7 @@ class CorpusSubclauses:
 
     def convert_sentence_to_subclauses(self, sentence):
         """
-        The helper method that converts a list of words (a sentence as a whole) to its corresponding subclauses.
+        The helper method that converts a sentence as a whole in string format to its corresponding subclauses.
         This actually is not used in this project, but can be employed by anyone who wants
             to break a sentence in string format into its subclauses as list.
 
