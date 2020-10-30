@@ -17,7 +17,7 @@ p = re.compile(r"([.?!])[\"\']*$")
 
 nlp = spacy.load("en_core_web_sm")
 
-conj_list = ["and", "or", "but", "however", "also", "?", "!", ".", ",", ":", ";", ]
+conj_and_punc_list = ["and", "or", "but", "however", "also", "?", "!", ".", ",", ":", ";", ]
 
 
 class CorpusSubclauses:
@@ -195,7 +195,7 @@ class CorpusSubclauses:
             subcl = self.remove_ind(subcl)
             if subcl[-1] not in ".?!;:":
                 subcl = subcl + [final_punc]
-            subcl = self.remove_trailing_conjs_and_puncs(subcl, conj_list)
+            subcl = self.remove_trailing_conjs_and_puncs(subcl, conj_and_punc_list)
             final_subclauses_upd.append(subcl)
         return final_subclauses_upd
 
@@ -227,7 +227,7 @@ class CorpusSubclauses:
     def remove_trailing_conjs_and_puncs(self, s, conjunction_list):
         """
         This method removes the trailing conjunctions and punctuation marks that are specified
-        in the variable conj_list.
+        in the variable conj_and_punc_list.
         This is useful, since a subclause cannot in general start with a punctuation mark or, say "and".
 
 
